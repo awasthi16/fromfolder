@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text Size</title>
+  <style>
+    /* Base body style */
+    body {
+      font-size: 16px; /* Base font size */
+    }
+
+    /* Text elements using relative units */
+    h1 {
+      font-size: 2rem; /* 2 times the root font size */
+    }
+
+    p {
+      font-size: 1.25rem; /* 1.25 times the root font size */
+    }
+
+    /* To simulate resizing the body */
+    .large {
+      font-size: 20px; /* Increasing body font size */
+    }
+
+    .small {
+      font-size: 12px; /* Decreasing body font size */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Responsive Heading</h1>
+    <p>This paragraph's size changes when the body's font size changes.</p>
+
+    <button onclick="document.body.className = 'large'">Increase Body Size</button>
+    <button onclick="document.body.className = 'small'">Decrease Body Size</button>
+    <button onclick="document.body.className = ''">Reset Body Size</button>
+  </div>
+</body>
+</html>

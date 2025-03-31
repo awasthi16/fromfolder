@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Content</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Scrollable Section */
+        .scrollable-container {
+            width: 400px;
+            height: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #dec2c2;
+            border: 1px solid #bc1212;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+        }
+
+        /* Custom Scrollbar Styling */
+        .scrollable-container::-webkit-scrollbar {
+            width: 100px; /* Width of the scrollbar */
+        }
+
+        .scrollable-container::-webkit-scrollbar-track {
+            background: #b1acac; /* Track background */
+            border-radius: 5px;
+        }
+
+        .scrollable-container::-webkit-scrollbar-thumb {
+            background: #888; /* Scrollbar thumb color */
+            border-radius: 5px;
+        }
+
+        .scrollable-container::-webkit-scrollbar-thumb:hover {
+            background: #ac2525; /* Scrollbar thumb hover color */
+        }
+
+        /* Content */
+        .scrollable-content p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scrollable Content Example</h1>
+    <div class="scrollable-container">
+        <div class="scrollable-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis urna. Praesent ultrices nulla ut risus tincidunt bibendum.</p>
+            <p>Curabitur elementum erat ac purus varius, nec vehicula lectus feugiat. Nullam a metus lacus. Integer at turpis sed velit commodo imperdiet.</p>
+            <p>Proin interdum velit et justo euismod, in auctor eros lacinia. Phasellus non elit vel lacus aliquam fermentum.</p>
+            <p>Suspendisse potenti. Mauris ac elit aliquam, dapibus lorem eget, luctus justo. Integer id ex metus.</p>
+            <p>Sed consectetur, nulla vel vestibulum bibendum, mauris felis vulputate enim, sed commodo libero augue non ipsum.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide-animation 12s infinite;
+        }
+
+        .slide {
+            width: 50%;
+            flex-shrink: 0;
+            
+
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Navigation Dots */
+        .navigation-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: dot-opacity 12s infinite;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 3s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 6s;
+        }
+        .dot:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        /* Keyframes for Slider */
+        @keyframes slide-animation {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(0); }
+            30% { transform: translateX(-100%); }
+            50% { transform: translateX(-100%); }
+            55% { transform: translateX(-200%); }
+            75% { transform: translateX(-200%); }
+            80% { transform: translateX(-300%); }
+            100% { transform: translateX(-300%); }
+        }
+
+        /* Keyframes for Dots */
+        @keyframes dot-opacity {
+            0%, 25% { opacity: 1; }
+            30%, 100% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://cdn.lazyshop.com/files/0e428451-768e-4436-8779-f10fd7e12941/product/73ed985f70b53c883efb5dd20b5abfb3.jpeg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/25/b0/76/25b0765140c6cc8915c9aa1033501aaf.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/9c/7a/25/9c7a25597630beb01a156ca950a89e4c.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/58/d2/42/58d24259a001e21ac3a65f305689ffd3.jpg" alt="Image 4">
+            </div>
+        </div>
+
+        <div class="navigation-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

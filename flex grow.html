@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Grow Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      background-color: #f4f4f4;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .box {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .box1 {
+      flex-grow: 1; /* Takes 1 portion of the available space */
+    }
+
+    .box2 {
+      flex-grow: 2; /* Takes 2 portions of the available space */
+    }
+
+    .box3 {
+      flex-grow: 3; /* Takes 3 portions of the available space */
+    }
+    .k1{
+        flex-grow: 1 ;
+    }
+  </style>
+</head>
+<body>
+    <h1 class="ki">hello ji kya haal </h1>
+  <div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+
+    <div class="box box3">Box 3</div>
+   
+  </div>
+</body>
+</html>
